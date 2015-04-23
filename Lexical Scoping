@@ -1,10 +1,10 @@
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
         set <- function(y) {
-                x <<- y ## assign the input matrix y to the variable x in the
-                m <<- NULL ## re-initialize m in the parent environment to null
+                x <<- y 
+                m <<- NULL 
         }
-        get <- function() x ## return the matrix x
+        get <- function() x
         setinverse <- function(inverse) m <<- inverse ## set the cache m equal
         getinverse <- function() m ## return the cached inverse of x
         list(set = set, get = get,
